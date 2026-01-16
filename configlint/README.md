@@ -59,8 +59,9 @@ GOWORK=off go build -o ddconfiglint .
 If you want a convenient alias on macOS (zsh), add one to your `~/.zshrc`:
 
 ```bash
-echo 'alias ddlint="/Users/sunryeok.kim/dd/datadog-agent/tools/configlint/ddconfiglint --repo-root ~/dd/datadog-agent"' >> ~/.zshrc
+echo 'alias ddlint="<path_to_ddconfiglint> --repo-root <path_to_datadog_agent_repo>"' >> ~/.zshrc
 source ~/.zshrc
+example: echo 'alias ddlint="/Users/sunryeok.kim/dd/datadog-agent/tools/configlint/ddconfiglint --repo-root ~/dd/datadog-agent"' >> ~/.zshrc
 ```
 
 ### Integration schema sources

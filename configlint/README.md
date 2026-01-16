@@ -54,6 +54,15 @@ GOWORK=off go build -o ddconfiglint .
 ./ddconfiglint --repo-root /path/to/datadog-agent /path/to/conf.d/<integration>.d/conf.yaml
 ```
 
+### Add a macOS alias (zsh)
+
+If you want a convenient alias on macOS (zsh), add one to your `~/.zshrc`:
+
+```bash
+echo 'alias ddlint="/Users/sunryeok.kim/dd/datadog-agent/tools/configlint/ddconfiglint --repo-root ~/dd/datadog-agent"' >> ~/.zshrc
+source ~/.zshrc
+```
+
 ### Integration schema sources
 
 If the integrations repositories are siblings of `datadog-agent`:

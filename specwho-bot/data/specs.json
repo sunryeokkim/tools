@@ -1,0 +1,379 @@
+[
+  {
+    "spec": "Agent",
+    "pod": "Infra Pod",
+    "aliases": [
+      "agent",
+      "agent integrations",
+      "dogstatsd",
+      "agent checks",
+      "integration tools and libraries",
+      "log agent",
+      "agentless log forwarder plugins",
+      "redis",
+      "cassandra",
+      "clickhouse",
+      "ndm",
+      "snmp",
+      "netflow",
+      "topology",
+      "cnm",
+      "npm",
+      "network map",
+      "network path",
+      "host map",
+      "host list",
+      "otel log collection",
+      "otel hostname issues",
+      "otel metric collection"
+    ],
+    "notes": [
+      "Cloud crawler metrics route to Cloud Integrations",
+      "Container installs route to Containers",
+      "Instrumentation and trace-related OpenTelemetry route to APM"
+    ]
+  },
+  {
+    "spec": "Cloud Integrations",
+    "pod": "Infra Pod",
+    "aliases": [
+      "cloud integrations",
+      "aws integration",
+      "azure integration",
+      "gcp integration",
+      "oci integration",
+      "alibaba integration",
+      "datadog forwarder",
+      "crawler metrics",
+      "cloud cost management",
+      "cloudcraft",
+      "azure vm extension",
+      "azure aks extension",
+      "cloudformation"
+    ],
+    "notes": [
+      "Agent on cloud VMs can route to Agent",
+      "Agent on ECS or EKS can route to Containers",
+      "Lambda/serverless can route to Serverless"
+    ]
+  },
+  {
+    "spec": "Containers",
+    "pod": "Infra Pod",
+    "aliases": [
+      "containers",
+      "container",
+      "autodiscovery",
+      "datadog helm chart",
+      "helm chart",
+      "datadog crds",
+      "cluster agent",
+      "ebpf probe",
+      "container map",
+      "containerized environment"
+    ],
+    "notes": [
+      "Redisdb and Nginx integration issues can route to Agent",
+      "trace-agent can route to APM",
+      "process-agent can route to Other New and Miscellaneous"
+    ]
+  },
+  {
+    "spec": "Database Monitoring",
+    "pod": "Infra Pod",
+    "aliases": [
+      "dbm",
+      "database monitoring",
+      "database integrations",
+      "mysql",
+      "sql server",
+      "postgres",
+      "postgresql"
+    ],
+    "notes": []
+  },
+  {
+    "spec": "Serverless",
+    "pod": "Infra Pod",
+    "aliases": [
+      "serverless",
+      "lambda",
+      "lambda library",
+      "lambda layer",
+      "lambda extension",
+      "datadog lambda extension",
+      "datadog serverless plugin",
+      "google cloud run",
+      "azure app service",
+      "azure container apps",
+      "x-ray traces"
+    ],
+    "notes": [
+      "aws.lambda.* crawler metrics route to Cloud Integrations",
+      "Datadog Forwarder routes to Cloud Integrations"
+    ]
+  },
+  {
+    "spec": "AAA",
+    "pod": "Ingestion Pod",
+    "aliases": [
+      "aaa",
+      "authentication",
+      "access control",
+      "accounts",
+      "rbac",
+      "grace",
+      "org management",
+      "multi org",
+      "login",
+      "subdomains",
+      "sessions",
+      "api keys",
+      "application keys",
+      "saml",
+      "oidc",
+      "restriction policies",
+      "governance console"
+    ],
+    "notes": []
+  },
+  {
+    "spec": "Graphing",
+    "pod": "Ingestion Pod",
+    "aliases": [
+      "graphing",
+      "dashboard",
+      "screenboard",
+      "dashboard list",
+      "notebooks",
+      "sheets",
+      "ddsql",
+      "embedded graphs",
+      "graph frontend",
+      "graph snapshots",
+      "service map frontend"
+    ],
+    "notes": [
+      "Monitor widgets can route to Monitors",
+      "Integration dashboard contents can route to Agent"
+    ]
+  },
+  {
+    "spec": "Metrics",
+    "pod": "Ingestion Pod",
+    "aliases": [
+      "metrics",
+      "metric intake",
+      "metric storage",
+      "pre-aggregation",
+      "metric metadata",
+      "custom metrics"
+    ],
+    "notes": [
+      "Dogstatsd and Prometheus/OpenMetrics collection route to Agent",
+      "CloudWatch discrepancies route to Cloud Integrations",
+      "Metric monitor first look is Monitors"
+    ]
+  },
+  {
+    "spec": "Monitors",
+    "pod": "Ingestion Pod",
+    "aliases": [
+      "monitor",
+      "monitors",
+      "monitor widgets",
+      "downtimes",
+      "notifications",
+      "slo",
+      "service check evaluations",
+      "monitor api"
+    ],
+    "notes": [
+      "Metric monitor evaluations route to Metrics",
+      "Log monitor evaluations route to Logs",
+      "RUM monitor evaluations route to RUM",
+      "On-Call routes to Service Management"
+    ]
+  },
+  {
+    "spec": "Logs",
+    "pod": "Event Pod",
+    "aliases": [
+      "logs",
+      "live tail",
+      "log explorer",
+      "log analytics",
+      "log pipelines",
+      "processing pipelines",
+      "log metrics",
+      "log archives",
+      "rehydration",
+      "logs rbac",
+      "flex logs",
+      "log apis",
+      "observability pipeline",
+      "kinesis firehose",
+      "log forwarding"
+    ],
+    "notes": [
+      "Agent log collection issues can route to Agent or Containers",
+      "Lambda Forwarder routes to Cloud Integrations",
+      "Log monitor first look is Monitors"
+    ]
+  },
+  {
+    "spec": "Security",
+    "pod": "Event Pod",
+    "aliases": [
+      "security",
+      "csm",
+      "cws",
+      "cspm",
+      "vulnerabilities",
+      "risk management",
+      "identity risks",
+      "cloud siem",
+      "content packs",
+      "asm",
+      "sca",
+      "code security"
+    ],
+    "notes": [
+      "Tracing issues route to APM",
+      "Missing log attribute routes to Logs",
+      "Infrastructure issues can route to Agent/Cloud/Containers"
+    ]
+  },
+  {
+    "spec": "Service Management",
+    "pod": "Event Pod",
+    "aliases": [
+      "service management",
+      "incident",
+      "incident app",
+      "event management",
+      "event explorer",
+      "event-based metrics",
+      "event correlation",
+      "webhooks",
+      "jira",
+      "servicenow",
+      "pagerduty",
+      "opsgenie",
+      "chat integrations",
+      "on-call",
+      "workflow automation",
+      "app builder",
+      "action interface",
+      "datastore",
+      "action catalog",
+      "case management"
+    ],
+    "notes": []
+  },
+  {
+    "spec": "Other New and Miscellaneous",
+    "pod": "Event Pod",
+    "aliases": [
+      "new and miscellaneous",
+      "web integrations",
+      "saas integrations",
+      "cloudflare",
+      "azure devops",
+      "salesforce",
+      "confluent cloud",
+      "crowdstrike",
+      "google workspace",
+      "microsoft 365",
+      "statuspage",
+      "ci visibility",
+      "cd visibility",
+      "mobile app",
+      "reference tables",
+      "bitsai"
+    ],
+    "notes": []
+  },
+  {
+    "spec": "APM",
+    "pod": "Frontend Pod",
+    "aliases": [
+      "apm",
+      "tracing",
+      "dd-trace",
+      "trace-agent",
+      "runtime metrics",
+      "service catalog",
+      "opentelemetry traces",
+      "continuous profiler",
+      "profiler",
+      "error tracking apm",
+      "data streams monitoring",
+      "data job monitoring"
+    ],
+    "notes": [
+      "Lambda traces route to Serverless",
+      "Browser/iOS/Android monitoring routes to RUM or Synthetics",
+      "Trace remapper in pipeline routes to Logs"
+    ]
+  },
+  {
+    "spec": "ML Observability",
+    "pod": "Frontend Pod",
+    "aliases": [
+      "ml observability",
+      "llm observability",
+      "llm obs",
+      "llm obs python sdk",
+      "llm obs node sdk",
+      "llm obs java sdk",
+      "api instrumentation",
+      "gen_ai semantic conventions",
+      "evaluations",
+      "cluster map",
+      "datasets",
+      "experiments",
+      "mcp client",
+      "ai agent console"
+    ],
+    "notes": [
+      "Basic APM visibility routes to APM",
+      "BitsAI routes to Other New and Miscellaneous"
+    ]
+  },
+  {
+    "spec": "RUM",
+    "pod": "Frontend Pod",
+    "aliases": [
+      "rum",
+      "browser rum",
+      "session replay",
+      "browser logs",
+      "mobile sdk",
+      "android tracing",
+      "ios tracing",
+      "product analytics",
+      "error tracking rum"
+    ],
+    "notes": [
+      "Error Tracking with APM source routes to APM"
+    ]
+  },
+  {
+    "spec": "Synthetics",
+    "pod": "Frontend Pod",
+    "aliases": [
+      "synthetics",
+      "synthetics test results",
+      "uptime",
+      "assertions",
+      "synthetics ui",
+      "private locations",
+      "synthetics ci",
+      "synthetic-related org settings"
+    ],
+    "notes": [
+      "Error Tracking with APM source routes to APM"
+    ]
+  }
+]
